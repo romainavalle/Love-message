@@ -172,11 +172,14 @@ function Ptcl(obj){
 		startApp();
 	
 
-	
-	
-    window._gaq = [['_setAccount','UA-20702484-1'],['_trackPageview'],['_trackPageLoadTime']];
-    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    
+	  
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+try{
+var pageTracker = _gat._getTracker("UA-20702484-1");
+pageTracker._trackPageview();
+} catch(err) {}
   </script>
 	</body>
 </html>
